@@ -1,0 +1,17 @@
+
+def Login():
+    while True:
+        username = input("Enter Mapua email: ")
+        password = input("Enter password: ")
+        cursor.execute("SELECT * FROM `#placeholder for database` WHERE `#placeholder for database` = ? AND `password` = ?", (username.get(), password.get()))
+        verify = cursor.fetchone()
+        if verify:
+            for i in verify:
+                print("Welcome to Chatpal")
+            return ()
+        else:
+            print("Sorry, user not found")
+            reply = input("Do you want to try again? Y/N: ")
+            if reply.upper() == "N"
+                print("Thank you for using our service")
+                break
