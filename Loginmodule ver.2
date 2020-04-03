@@ -1,26 +1,21 @@
-import mysql.connector
-
-def Login():
+import pymysql
+def login():
     while True:
-        connection = mysql.connector.connect(host='localhost',
-                                             database='login_acc',
-                                             user=' Palagay ng user',
-                                             password=' Palagat ng pass ')
-        if connection.is_connected():
-            username = input("Enter Mapua email: ")
-            password = input("Enter password: ")
-            with mysql.connect
-            cursor.execute("SELECT * FROM `users` WHERE `email` = ? AND `password` = ?", (username.get(), password.get()))
-            verify = cursor.fetchone()
+            db = pymysql.connect("localhost", "root", "mymapua20", "loginacc")
+            email = input(str("Enter Mapua email: "))
+            password = input(str("Enter password: "))
+            mycursor = db.cursor()
+            mycursor.execute("select * from accounts WHERE email = 'email' AND password = 'password' " )
+            verify = mycursor.fetchall()
             if verify:
                 for i in verify:
                     print("Welcome to Chatpal")
-                return ()
+                return ("exit")
             else:
                 print("Sorry, user not found")
                 reply = input("Do you want to try again? y/n: ")
                 if reply.lower() == "n":
                     print("Thank you for using our service")
-                    break
+                return ("exit")
 
 login()
