@@ -1,11 +1,10 @@
-import pymysql
 def login():
     while True:
             db = pymysql.connect("localhost", "root", "mymapua20", "loginacc")
-            email = input(str("Enter Mapua email: "))
-            password = input(str("Enter password: "))
+            email = input("Enter Mapua email: ")
+            password = input("Enter password: ")
             mycursor = db.cursor()
-            mycursor.execute("select * from accounts WHERE email = 'email' AND password = 'password' " )
+            mycursor.execute("SELECT * FROM `accounts` WHERE `email` = '"+email+"' AND `password` = '"+password+"'")
             verify = mycursor.fetchall()
             if verify:
                 for i in verify:
@@ -17,5 +16,4 @@ def login():
                 if reply.lower() == "n":
                     print("Thank you for using our service")
                 return ("exit")
-
 login()
