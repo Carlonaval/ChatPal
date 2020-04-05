@@ -25,8 +25,7 @@ DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE `accounts` (
   `accounts_id` int NOT NULL,
   `email` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
-  PRIMARY KEY (`accounts_id`)
+  `password` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,7 +35,7 @@ CREATE TABLE `accounts` (
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-INSERT INTO `accounts` VALUES (1,'cbnaval@mymail.mapua.edu.ph','carlson01'),(2,'ejmariano@mymail.mapua.edu.ph','ezekiel02'),(3,'hassison@mymail.mapua.edu.ph','herschel03'),(4,'knaesima@mymail.mapua.edu.ph','katreen04'),(5,'melmagmoyao@mymail.mapua.edu.ph','mikaella04');
+INSERT INTO `accounts` VALUES (1,'cbnaval@mymail.mapua.edu.ph','carlson01'),(2,'ejmariano@mymail.mapua.edu.ph','ezekiel02'),(3,'hassison@mymail.mapua.edu.ph','herschel03'),(4,'knaesima@mymail.mapua.edu.ph','katreen04'),(5,'melmagmoyao@mymail.mapua.edu.ph','mikaella05');
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-05  1:38:53
+-- Dump completed on 2020-04-05 11:35:35
